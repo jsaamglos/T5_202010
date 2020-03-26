@@ -1,7 +1,6 @@
 package model.data_structures;
 
-public interface IListaEncadenada<T>
-{
+public interface IListaEncadenada<K, T> {
 
 	/**
 	 * Retornar el numero de elementos presentes en la lista.
@@ -16,7 +15,7 @@ public interface IListaEncadenada<T>
 	 * @param dato
 	 *            nuevo elemento
 	 */
-	public void agregarElemento(T dato);
+	public void agregarElemento(K llave, T dato);
 
 	/**
 	 * Buscar un dato en la lista.

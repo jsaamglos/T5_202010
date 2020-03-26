@@ -1,20 +1,20 @@
 package model.data_structures;
 
-public interface INode<T> {
+public interface INode<K,T> {
 
 	/**
 	 * Retorna el nodo siguiente
 	 * 
 	 * @return El nodo siguiente (null si no existe)
 	 */
-	public Node<T> getSiguiente();
+	public Node<K,T> getSiguiente();
 
 	/**
 	 * Retorna el nodo anterior
 	 * 
 	 * @return El nodo anterior (null si no existe)
 	 */
-	public Node<T> getAnterior();
+	public Node<K,T> getAnterior();
 
 	/**
 	 * Establece la referencia al nodo dato
@@ -22,7 +22,7 @@ public interface INode<T> {
 	 * @param dato
 	 *            el nodo que seria el siguiente a este.
 	 */
-	public void setSiguiente(Node<T> nodo);
+	public void setSiguiente(Node<K,T> nodo);
 
 	/**
 		/**
@@ -31,7 +31,7 @@ public interface INode<T> {
 	 * @param dato
 	 *            el nodo que seria el anterior a este.
 	 */
-	public void setAnterior(Node<T> nodo);
+	public void setAnterior(Node<K,T> nodo);
 
 	/**
 	 * Retorna el elemento almacenado en este nodo
@@ -39,4 +39,6 @@ public interface INode<T> {
 	 * @return El elemento almacenado en este nodo
 	 */
 	public T getElemento();
+	
+	public K getLlave();
 }
